@@ -1,6 +1,6 @@
 const { ethers } = require('ethers');
 
-const providerUrl = 'RPC节点地址';
+const providerUrl = 'https://rpc.fantom.network';
 const provider = new ethers.providers.JsonRpcProvider(providerUrl);
 const privateKey = '私钥';
 const wallet = new ethers.Wallet(privateKey, provider);
@@ -23,10 +23,10 @@ async function getCurrentNonce(wallet) {
 }
 //开打
 async function sendData() {
-    const data = 'data 16进制数据';
+    const data = '0x646174613a2c7b2270223a226672632d3230222c226f70223a226d696e74222c227469636b223a2266616e73222c22616d74223a223130303030227d';
 
     let nonce = await getCurrentNonce(wallet);
-    let amount = 100;   //循环次数
+    let amount = 1000;   //循环次数
     for (let i = 0; i < amount; i++) {
         try {
             let j = i % 10;
