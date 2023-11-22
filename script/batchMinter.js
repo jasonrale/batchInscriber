@@ -6,6 +6,10 @@ const privateKey = '私钥';
 const wallet = new ethers.Wallet(privateKey, provider);
 const recipientAddress = '转移的地址（自转）'; 
 
+function sleep(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
+}
+
 // 获取当前账户的 nonce
 async function getCurrentNonce(wallet) {
     try {
@@ -17,7 +21,7 @@ async function getCurrentNonce(wallet) {
       throw error;
     }
 }
-//开打 如果链上卡住了就换钱包打
+//开打
 async function sendData() {
     const data = 'data 16进制数据';
 
@@ -25,6 +29,12 @@ async function sendData() {
     let amount = 100;   //循环次数
     for (let i = 0; i < amount; i++) {
         try {
+            let j = i % 10;
+            if(j == 0) {
+                sleep(5000);
+                nonce = await getCurrentNonce(wallet);
+            }
+
             let currentGasPrice = await provider.getGasPrice();
             const tx = await wallet.sendTransaction({
                 to: recipientAddress,
@@ -32,9 +42,10 @@ async function sendData() {
                 data: data,
                 gasPrice: currentGasPrice,
                 gasLimit: 25000,
-                nonce: nonce + i
+                chainId: 250,
+                nonce: nonce + j
             });
-            console.log(`第 ${nonce + i} 次数据交易哈希:`, tx.hash);
+            console.log(`第 ${nonce + j} 次数据交易哈希:`, tx.hash);
         } catch (error) {
             i--;
             console.error('发生异常:', error.message);
