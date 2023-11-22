@@ -9,4 +9,5 @@ https://dune.com/azkrale/fans-frc20 $fans看板
 Node.js下载地址：https://nodejs.org/en/download  
 vscode下载地址：https://code.visualstudio.com/download  
 
-进入项目根目录，打开终端（命令提示符/cmd）脚本启动命令： node .\script\batchMinter.js
+
+先看代码，修改后，进入项目根目录，打开终端（命令提示符/cmd）脚本启动命令： node .\script\batchMinter.js
