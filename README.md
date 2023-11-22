@@ -10,4 +10,4 @@ Node.js下载地址：https://nodejs.org/en/download
 vscode下载地址：https://code.visualstudio.com/download  
 
 
-先看代码，修改后，进入项目根目录，打开终端（命令提示符/cmd）脚本启动命令： node .\script\batchMinter.js
+点击batchMinter.js文件，修改你的私钥和地址后，进入项目根目录，打开终端（命令提示符/cmd）脚本启动命令： node .\script\batchMinter.js 即刻开打
