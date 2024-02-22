@@ -1,5 +1,5 @@
 {
-  "name": "batchminter",
+  "name": "batchInscriber",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,5 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "ethers": "^5.7.2"
+  },
+  "repository": {
+    "type": "git",
+      "url": "git+https://github.com/jasonrale/batchInscriber.git"
   }
 }
