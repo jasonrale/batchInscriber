@@ -1,0 +1,8 @@
+# Dotenv file
+.env
+
+# Vscode file
+.vscode
+.github
+.history
+node_modules/

@@ -1,6 +1,6 @@
 {
   "name": "batch_inscriber",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,10 +9,11 @@
   "author": "Jasonrale",
   "license": "ISC",
   "dependencies": {
-    "ethers": "^5.7.2"
+    "ethers": "^5.7.2",
+    "rescue_wallet_with_flashbots": "^1.0.1"
   },
   "repository": {
     "type": "git",
-      "url": "git://github.com/jasonrale/batchInscriber.git"
+    "url": "git://github.com/jasonrale/batchInscriber.git"
   }
 }
